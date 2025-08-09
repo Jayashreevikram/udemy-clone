@@ -84,11 +84,15 @@ display: none;
     color: white;
     border-radius: 10px;
     padding: 5px;
-     
+    cursor: pointer; 
+    border: solid brown 2px;
 }
 
 .categories p:hover{
-background-color: brown;
+    transition: 2s;
+    background-color: transparent;
+    color: black;
+    border: solid brown 2px;
 }
 
 .sale-img{
@@ -108,10 +112,24 @@ background-color: brown;
     position: absolute;
     top: 10px;
     left: 10px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
    
    
 }
-
+@keyframes zoom{
+    0%{
+    transform: scale(0);
+    opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
 .recommended{
     padding: 10px;
 }
